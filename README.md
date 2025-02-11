@@ -2,7 +2,7 @@
 
 This a GPT clone done in acquaintance with the utilization of Model API and integration in projects..
 
-Its a cintributive effort of;
+Its a contributive effort of;
 
 1. Muhammad Ajuwon
     Email: ajuwonmuhammad99@gmail.com
@@ -13,5 +13,5 @@ Its a cintributive effort of;
 3. Akanji kazeem 
     Email: akanjik2@gmail.com
 
-4.
-
+4. OKUNOLA JOSHUA
+   Email:okunolaolatunde2018@gmail.com
