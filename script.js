@@ -2,9 +2,9 @@ const chatInput = document.querySelector("#chat-input");
 const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
-const deleteButton = document.querySelector("#delete-btn")
-    var userText = null;
-var API_KEY = "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";
+const deleteButton = document.querySelector("#delete-btn");
+let userText = null;
+const API_KEY = "PASTE-YOUR-API-KEY-HERE"; // Paste your API key here
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
     const themeColor = localStorage.getItem("themeColor");
@@ -35,10 +35,12 @@ const getChatResponse = async (incomingChatDiv) => {
             "Authorization": `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            "model": "gpt-3.5-turbo-instruct",
-            "prompt": userText,
-            "max_tokens": 7,
-           "temperature": 0
+            model: "text-davinci-003",
+            prompt: userText,
+            max_tokens: 2048,
+            temperature: 0.2,
+            n: 1,
+            stop: null
         })
     }
     // Send POST request to API, get response and set the reponse as paragraph element text
