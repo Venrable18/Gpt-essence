@@ -36,7 +36,7 @@ const getChatResponse = async (incomingChatDiv) => {
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo-instruct",
-            "prompt": `${userText}`,
+            "prompt": userText,
             "max_tokens": 7,
            "temperature": 0
         })
