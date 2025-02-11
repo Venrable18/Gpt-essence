@@ -1,4 +1,4 @@
-const chatInput = document.querySelector("#chat-input");
+Theconst chatInput = document.querySelector("#chat-input");
 const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
@@ -35,12 +35,10 @@ const getChatResponse = async (incomingChatDiv) => {
             "Authorization": `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            model: "text-davinci-003",
-            prompt: userText,
-            max_tokens: 2048,
-            temperature: 0.2,
-            n: 1,
-            stop: null
+            "model": "gpt-3.5-turbo-instruct",
+    "prompt": `${userText}`,
+    "max_tokens": 2048,
+    "temperature": 0.2
         })
     }
     // Send POST request to API, get response and set the reponse as paragraph element text
